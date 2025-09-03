@@ -1,7 +1,7 @@
 To run your eBook library project:
 
   # Navigate to the project directory
-  cd "D:\לימודים\תוכנה שנה ד\מבוא לתקשורת מחשבים\eBookLibrary"
+  cd ...\eBookLibrary"
 
   # Restore packages
   dotnet restore
