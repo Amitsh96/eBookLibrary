@@ -1,0 +1,44 @@
+﻿@model eBookLibrary.Models.BookReviewsViewModel
+
+<div class="container mt-4">
+    @if (Model == null)
+    {
+        <p>Error: Model is null</p>
+        return;
+    }
+
+    @if (Model.Book == null)
+    {
+        <p>Book not found.</p>
+        return;
+    }
+
+    <h2 class="text-center">@Model.Book.Title</h2>
+    <p class="text-center">@Model.Book.Author</p>
+    <p class="text-center">Price: @Model.Book.PricePurchase</p>
+
+    <h3>Reviews</h3>
+    <ul class="list-group mb-4">
+        @if (Model.Reviews?.Any() == true)
+        {
+            @foreach (var review in Model.Reviews)
+            {
+                <li class="list-group-item">
+                    <strong>@(review.User?.Email ?? "Unknown User"):</strong> @review.Content
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-primary">Rating: @review.Rating/5</span>
+                        <small class="text-muted">Posted on: @review.CreatedAt.ToString("MM/dd/yyyy")</small>
+                    </div>
+                </li>
+            }
+        }
+        else
+        {
+            <li class="list-group-item">No reviews yet.</li>
+        }
+    </ul>
+
+    <div class="text-center mt-3">
+        <a href="javascript:history.back()" class="btn btn-secondary">Back</a>
+    </div>
+</div>

@@ -1,0 +1,333 @@
+﻿@model eBookLibrary.Models.UserLibraryViewModel
+
+<div class="container my-5">
+    <!-- Page Title -->
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold" style="color: var(--primary-color);">My Collection</h2>
+        <p class="lead text-muted">All your literary treasures in one place</p>
+    </div>
+
+    <!-- Notification Messages -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-pills mb-5 justify-content-center" id="libraryTabs" role="tablist">
+        <li class="nav-item mx-2" role="presentation">
+            <button class="nav-link active px-4 py-2" id="borrowed-tab" data-bs-toggle="pill" data-bs-target="#borrowed" type="button" role="tab">
+                <i class="bi bi-journal-bookmark me-2"></i>Borrowed
+                @if (Model.BorrowedBooks?.Count > 0)
+                {
+                    <span class="badge custom-badge ms-2">@Model.BorrowedBooks.Count</span>
+                }
+            </button>
+        </li>
+        <li class="nav-item mx-2" role="presentation">
+            <button class="nav-link px-4 py-2" id="owned-tab" data-bs-toggle="pill" data-bs-target="#owned" type="button" role="tab">
+                <i class="bi bi-collection me-2"></i>Owned
+                @if (Model.PurchasedBooks?.Count > 0)
+                {
+                    <span class="badge custom-badge ms-2">@Model.PurchasedBooks.Count</span>
+                }
+            </button>
+        </li>
+        <li class="nav-item mx-2" role="presentation">
+            <button class="nav-link px-4 py-2" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab">
+                <i class="bi bi-grid me-2"></i>All Books
+            </button>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="libraryTabsContent">
+        <!-- Borrowed Books Tab -->
+        <div class="tab-pane fade show active" id="borrowed" role="tabpanel" aria-labelledby="borrowed-tab">
+            @if (Model.BorrowedBooks != null && Model.BorrowedBooks.Count > 0)
+            {
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                    @foreach (var book in Model.BorrowedBooks)
+                    {
+                        <div class="col">
+                            <div class="book-card h-100">
+                                <div class="card-header text-center" style="background-color: var(--primary-color); color: white;">
+                                    <span class="fw-semibold">Borrowed</span>
+                                    <span class="badge bg-light text-dark float-end">Due: @book.DueDate.ToString("MM/dd/yyyy")</span>
+                                </div>
+                                <div class="position-relative">
+                                    @if (!string.IsNullOrEmpty(book.CoverImage))
+                                    {
+                                        <img src="@book.CoverImage" class="card-img-top" alt="@book.Title" style="height: 250px; object-fit: cover;">
+                                    }
+                                    else
+                                    {
+                                        <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height: 250px;">
+                                            <i class="bi bi-book" style="font-size: 5rem; color: #ccc;"></i>
+                                        </div>
+                                    }
+                                    
+                                    @if (book.DaysLeft < 0)
+                                    {
+                                        <div class="position-absolute top-0 end-0 m-2">
+                                            <span class="badge bg-danger p-2">Overdue</span>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold mb-1">@book.Title</h5>
+                                    <p class="card-subtitle text-muted mb-3">by @book.Author</p>
+                                    
+                                    <div class="mb-3">
+                                        <span class="badge" style="background-color: var(--primary-color);">Fiction</span>
+                                        <span class="badge bg-secondary">Digital</span>
+                                    </div>
+                                    
+                                    <div class="progress mb-3" style="height: 8px;">
+                                        @{
+                                            // Calculate progress bar
+                                            bool isOverdue = book.DaysLeft < 0;
+                                            bool isReturned = false; // Assumed false if in borrowed books list
+                                            // Base the progress on days left vs total loan period (approximated as 14 days)
+                                            int loanPeriod = 14; // Assuming 14 days loan period
+                                            int daysUsed = loanPeriod - book.DaysLeft;
+                                            double progressPercentage = isReturned ? 100 : (isOverdue ? 100 : Math.Min(100, (daysUsed / (double)loanPeriod) * 100));
+                                            string progressColor = progressPercentage < 70 ? "success" : (progressPercentage < 90 ? "warning" : "danger");
+                                        }
+                                        <div class="progress-bar bg-@progressColor" role="progressbar" style="width: @progressPercentage%"></div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="text-muted">Borrowed: @DateTime.Now.AddDays(-book.DaysLeft - 14).ToString("MM/dd/yyyy")</small>
+                                        <small class="text-muted">Due: @book.DueDate.ToString("MM/dd/yyyy")</small>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <div class="text-center">
+                                        <small class="text-muted">Actions have been disabled for this book</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="bi bi-journal-x" style="font-size: 4rem; color: var(--primary-color); opacity: 0.5;"></i>
+                    <h4 class="mt-4">You haven't borrowed any books yet</h4>
+                    <p class="text-muted">Explore our collection to find your next great read</p>
+                    <a href="/User/ExploreBooks" class="btn btn-primary mt-3">
+                        <i class="bi bi-search me-2"></i>Browse Books
+                    </a>
+                </div>
+            }
+        </div>
+
+        <!-- Owned Books Tab -->
+        <div class="tab-pane fade" id="owned" role="tabpanel" aria-labelledby="owned-tab">
+            @if (Model.PurchasedBooks != null && Model.PurchasedBooks.Count > 0)
+            {
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                    @foreach (var book in Model.PurchasedBooks)
+                    {
+                        <div class="col">
+                            <div class="book-card h-100">
+                                <div class="card-header text-center" style="background-color: var(--secondary-color); color: white;">
+                                    <span class="fw-semibold">Owned</span>
+                                    <span class="badge bg-light text-dark float-end">@book.PurchaseDate.ToString("MM/dd/yyyy")</span>
+                                </div>
+                                <div class="position-relative">
+                                    @if (!string.IsNullOrEmpty(book.CoverImage))
+                                    {
+                                        <img src="@book.CoverImage" class="card-img-top" alt="@book.Title" style="height: 250px; object-fit: cover;">
+                                    }
+                                    else
+                                    {
+                                        <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height: 250px;">
+                                            <i class="bi bi-book" style="font-size: 5rem; color: #ccc;"></i>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold mb-1">@book.Title</h5>
+                                    <p class="card-subtitle text-muted mb-3">by @book.Author</p>
+                                    
+                                    <div class="mb-3">
+                                        <span class="badge" style="background-color: var(--primary-color);">Fiction</span>
+                                        <span class="badge bg-secondary">Digital</span>
+                                    </div>
+                                    
+                                    <p class="card-text small text-muted">
+                                        This book is available in your permanent collection.
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <div class="text-center">
+                                        <small class="text-muted">Actions have been disabled for this book</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="bi bi-cart-x" style="font-size: 4rem; color: var(--secondary-color); opacity: 0.5;"></i>
+                    <h4 class="mt-4">You haven't purchased any books yet</h4>
+                    <p class="text-muted">Own your favorite titles and access them anytime</p>
+                    <a href="/User/ExploreBooks" class="btn btn-primary mt-3">
+                        <i class="bi bi-shop me-2"></i>Shop Books
+                    </a>
+                </div>
+            }
+        </div>
+
+        <!-- All Books Tab -->
+        <div class="tab-pane fade" id="all" role="tabpanel" aria-labelledby="all-tab">
+            @if ((Model.BorrowedBooks != null && Model.BorrowedBooks.Count > 0) || (Model.PurchasedBooks != null && Model.PurchasedBooks.Count > 0))
+            {
+                <div class="row mb-4">
+                    <div class="col-md-6 mx-auto">
+                        <div class="input-group">
+                            <input type="text" id="librarySearch" class="form-control" placeholder="Search your library..." style="border-radius: 25px 0 0 25px;">
+                            <button class="btn btn-primary" type="button" style="border-radius: 0 25px 25px 0;">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="allBooksContainer">
+                    @foreach (var book in Model.BorrowedBooks)
+                    {
+                        <div class="col book-item" data-title="@book.Title.ToLower()" data-author="@book.Author.ToLower()" data-type="borrowed">
+                            <div class="book-card h-100">
+                                <div class="position-relative">
+                                    @if (!string.IsNullOrEmpty(book.CoverImage))
+                                    {
+                                        <img src="@book.CoverImage" class="card-img-top" alt="@book.Title" style="height: 250px; object-fit: cover;">
+                                    }
+                                    else
+                                    {
+                                        <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height: 250px;">
+                                            <i class="bi bi-book" style="font-size: 5rem; color: #ccc;"></i>
+                                        </div>
+                                    }
+                                    
+                                    <div class="position-absolute top-0 start-0 m-2">
+                                        <span class="badge" style="background-color: var(--primary-color);">Borrowed</span>
+                                    </div>
+                                    
+                                    @if (book.DaysLeft < 0)
+                                    {
+                                        <div class="position-absolute top-0 end-0 m-2">
+                                            <span class="badge bg-danger p-2">Overdue</span>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold mb-1">@book.Title</h5>
+                                    <p class="card-subtitle text-muted mb-3">by @book.Author</p>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <div class="text-center">
+                                        <small class="text-muted">Actions have been disabled for this book</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    
+                    @foreach (var book in Model.PurchasedBooks)
+                    {
+                        <div class="col book-item" data-title="@book.Title.ToLower()" data-author="@book.Author.ToLower()" data-type="owned">
+                            <div class="book-card h-100">
+                                <div class="position-relative">
+                                    @if (!string.IsNullOrEmpty(book.CoverImage))
+                                    {
+                                        <img src="@book.CoverImage" class="card-img-top" alt="@book.Title" style="height: 250px; object-fit: cover;">
+                                    }
+                                    else
+                                    {
+                                        <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height: 250px;">
+                                            <i class="bi bi-book" style="font-size: 5rem; color: #ccc;"></i>
+                                        </div>
+                                    }
+                                    
+                                    <div class="position-absolute top-0 start-0 m-2">
+                                        <span class="badge" style="background-color: var(--secondary-color);">Owned</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold mb-1">@book.Title</h5>
+                                    <p class="card-subtitle text-muted mb-3">by @book.Author</p>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <div class="text-center">
+                                        <small class="text-muted">Actions have been disabled for this book</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                
+                <!-- Search Script -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const searchInput = document.getElementById('librarySearch');
+                        const bookItems = document.querySelectorAll('.book-item');
+                        
+                        searchInput.addEventListener('keyup', function() {
+                            const searchTerm = this.value.toLowerCase();
+                            
+                            bookItems.forEach(item => {
+                                const title = item.getAttribute('data-title');
+                                const author = item.getAttribute('data-author');
+                                
+                                if (title.includes(searchTerm) || author.includes(searchTerm)) {
+                                    item.style.display = '';
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                </script>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="bi bi-journals" style="font-size: 4rem; color: var(--accent-color); opacity: 0.5;"></i>
+                    <h4 class="mt-4">Your library is empty</h4>
+                    <p class="text-muted">Start borrowing or purchasing books to build your collection</p>
+                    <a href="/User/ExploreBooks" class="btn btn-primary mt-3">
+                        <i class="bi bi-search me-2"></i>Discover Books
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+    
+    <!-- Back to top button -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4" style="display: none; z-index: 1000;">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+</div>

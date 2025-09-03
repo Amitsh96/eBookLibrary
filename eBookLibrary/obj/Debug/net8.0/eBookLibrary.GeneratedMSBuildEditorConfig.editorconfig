@@ -1,0 +1,141 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = eBookLibrary
+build_property.RootNamespace = eBookLibrary
+build_property.ProjectDir = D:\לימודים\תוכנה שנה ד\מבוא לתקשורת מחשבים\eBookLibrary\eBookLibrary\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\לימודים\תוכנה שנה ד\מבוא לתקשורת מחשבים\eBookLibrary\eBookLibrary
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Admin/AddBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Admin/EditBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Admin/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Admin/ManageBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlQm9va3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Admin/ManageUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Admin/ViewWaitingList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1dhaXRpbmdMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/BorrowedBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb3Jyb3dlZEJvb2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/BorrowedBooksPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb3Jyb3dlZEJvb2tzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/BrowseBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCcm93c2VCb29rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/ConfirmJoinWaitingList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb25maXJtSm9pbldhaXRpbmdMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/ExploreBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFeHBsb3JlQm9va3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/Feedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGZWVkYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/Library.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaWJyYXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/PurchasedBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQdXJjaGFzZWRCb29rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/PurchasedBooksPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQdXJjaGFzZWRCb29rc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/Reviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZXZpZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/User/ViewCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxWaWV3Q2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/לימודים/תוכנה שנה ד/מבוא לתקשורת מחשבים/eBookLibrary/eBookLibrary/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-imehbqvm4x

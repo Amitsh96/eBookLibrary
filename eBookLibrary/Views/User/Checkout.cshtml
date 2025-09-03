@@ -1,0 +1,71 @@
+﻿@model eBookLibrary.Models.Book
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<div class="container mt-4">
+    <h2>Checkout</h2>
+
+    <!-- Display Selected Book Details -->
+    <div class="card my-4">
+        <div class="card-body">
+            <h4 class="card-title">@Model.Title</h4>
+            <p><strong>Author:</strong> @Model.Author</p>
+            <p>
+                <strong>Price:</strong>
+                @(HttpContextAccessor.HttpContext.Session.GetString("ActionType") == "borrow"
+                    ? "Free"
+                    : $"${Model.PricePurchase}")
+            </p>
+        </div>
+    </div>
+
+    <!-- Show Appropriate Form Based on Action Type -->
+    @if (HttpContextAccessor.HttpContext.Session.GetString("ActionType") == "purchase")
+    {
+        <!-- Payment Form -->
+        <form method="post" action="/User/ProcessPayment">
+            <input type="hidden" name="bookId" value="@Model.BookId" />
+
+            <div class="mb-3">
+                <label for="cardNumber" class="form-label">Card Number</label>
+                <input type="text"
+                       class="form-control"
+                       id="cardNumber"
+                       name="cardNumber"
+                       required
+                       pattern="\d{16}"
+                       placeholder="Enter 16-digit card number" />
+            </div>
+
+            <div class="mb-3">
+                <label for="expiry" class="form-label">Expired Date</label>
+                <input type="text"
+                       class="form-control"
+                       id="expiry"
+                       name="expiry"
+                       required
+                       placeholder="MM/YY" />
+            </div>
+
+            <div class="mb-3">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="text"
+                       class="form-control"
+                       id="cvv"
+                       name="cvv"
+                       required
+                       pattern="\d{3}"
+                       placeholder="Enter 3-digit CVV" />
+            </div>
+
+            <button type="submit" class="btn btn-success">Pay Now</button>
+        </form>
+    }
+    else if (HttpContextAccessor.HttpContext.Session.GetString("ActionType") == "borrow")
+    {
+        <!-- Borrow Confirmation Form -->
+        <form method="post" action="/User/BorrowBook">
+            <input type="hidden" name="bookId" value="@Model.BookId" />
+            <button type="submit" class="btn btn-primary">Confirm Borrow</button>
+        </form>
+    }
+</div>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<eBookLibrary.Models.Book>
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Manage Books</h1>
+    <!-- Add Book Button -->
+    <div class="text-end mb-3">
+        <a href="/Admin/AddBook" class="btn btn-success">Add Book</a>
+    </div>
+    <!-- Book Table -->
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr class="text-center">
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Cover Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        <!-- Display Prices -->
+                        <td class="text-center">
+                            @if (book.DiscountedPrice.HasValue && book.DiscountEndDate.HasValue && book.DiscountEndDate > DateTime.Now)
+                            {
+                                <!-- Original Price with strikethrough -->
+                                <span style="text-decoration: line-through; color: #999;">
+                                    @string.Format("{0:C}", book.PricePurchase)
+                                </span>
+                                <br />
+                                <!-- Discounted Price in red -->
+                                <span style="color: #dc3545; font-weight: bold;">
+                                    @string.Format("{0:C}", book.DiscountedPrice)
+                                </span>
+                                <br />
+                                <!-- Show discount end date -->
+                                <small class="text-muted">
+                                    Sale ends: @book.DiscountEndDate?.ToString("MM/dd/yyyy")
+                                </small>
+                            }
+                            else
+                            {
+                                <!-- Regular Price -->
+                                <span>@string.Format("{0:C}", book.PricePurchase)</span>
+                            }
+                        </td>
+                        <!-- Display Cover Image -->
+                        <td class="text-center">
+                            @if (!string.IsNullOrEmpty(book.CoverImage))
+                            {
+                                <img src="@book.CoverImage" alt="Cover Image"
+                                     style="width: 100px; height: 150px; object-fit: cover; border: 1px solid #ddd; border-radius: 4px;" />
+                            }
+                            else
+                            {
+                                <img src="https://via.placeholder.com/100x150.png?text=No+Image"
+                                     alt="No Cover Image"
+                                     style="width: 100px; height: 150px; object-fit: cover; border: 1px solid #ddd; border-radius: 4px;" />
+                            }
+                        </td>
+                        <!-- Actions -->
+                        <td class="text-center">
+                            <a href="/Admin/EditBook/@book.BookId" class="btn btn-primary btn-sm mb-2">Edit</a>
+                            <a href="/Admin/DeleteBook/@book.BookId"
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Are you sure you want to delete this book?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="text-center text-muted">No books available.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

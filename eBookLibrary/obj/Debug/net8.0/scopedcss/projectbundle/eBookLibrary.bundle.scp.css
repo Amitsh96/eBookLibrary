@@ -1,0 +1,119 @@
+/* _content/eBookLibrary/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-imehbqvm4x] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  font-weight: 600;
+}
+
+a[b-imehbqvm4x] {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover[b-imehbqvm4x] {
+  color: var(--primary-color);
+}
+
+.btn-primary[b-imehbqvm4x] {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.nav-pills .nav-link.active[b-imehbqvm4x], .nav-pills .show > .nav-link[b-imehbqvm4x] {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.border-top[b-imehbqvm4x] {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.border-bottom[b-imehbqvm4x] {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow[b-imehbqvm4x] {
+  box-shadow: var(--card-shadow);
+}
+
+button.accept-policy[b-imehbqvm4x] {
+  font-size: 1rem;
+  line-height: inherit;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+}
+
+.footer[b-imehbqvm4x] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu[b-imehbqvm4x] {
+  border: none;
+  box-shadow: var(--card-shadow);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+}
+
+.dropdown-item[b-imehbqvm4x] {
+  padding: 0.5rem 1.5rem;
+  transition: background-color var(--transition-speed);
+}
+
+.dropdown-item:hover[b-imehbqvm4x] {
+  background-color: rgba(94, 53, 177, 0.1);
+}
+
+/* Card components */
+.card[b-imehbqvm4x] {
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed);
+  overflow: hidden;
+}
+
+.card:hover[b-imehbqvm4x] {
+  transform: translateY(-5px);
+}
+
+.card-header[b-imehbqvm4x] {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  border-bottom: none;
+}
+
+.card-footer[b-imehbqvm4x] {
+  background-color: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Form controls */
+.form-control[b-imehbqvm4x] {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  transition: all var(--transition-speed);
+}
+
+.form-control:focus[b-imehbqvm4x] {
+  border-color: var(--primary-color);
+}
+
+/* Badge styling */
+.badge[b-imehbqvm4x] {
+  padding: 0.35em 0.65em;
+  font-weight: 500;
+  border-radius: 50px;
+}

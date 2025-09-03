@@ -1,0 +1,37 @@
+﻿@model List<eBookLibrary.Models.ShoppingCart>
+
+<div class="container mt-4">
+    <h1>Your Shopping Cart</h1>
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>$@item.Price</td>
+                        <td>
+                            <a href="/User/RemoveFromCart/@item.BookId" class="btn btn-danger btn-sm">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="text-end">
+            <h4>Total: $@Model.Sum(i => i.Price)</h4>
+            <a href="/User/Checkout" class="btn btn-primary">Proceed to Checkout</a>
+        </div>
+    }
+    else
+    {
+        <p>Your cart is empty.</p>
+    }
+</div>

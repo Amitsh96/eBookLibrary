@@ -1,0 +1,26 @@
+To run your eBook library project:
+
+  # Navigate to the project directory
+  cd "D:\לימודים\תוכנה שנה ד\מבוא לתקשורת מחשבים\eBookLibrary"
+
+  # Restore packages
+  dotnet restore
+
+  # Update database (creates the database if it doesn't exist)
+  dotnet ef database update --project eBookLibrary
+
+  # Run the application
+  dotnet run --project eBookLibrary
+
+  The application will start and be available at:
+  - HTTPS: https://localhost:44365
+  - HTTP: http://localhost:5103
+
+  Open either URL in your browser. The HTTPS version is recommended for demonstrating security features.
+
+  If you encounter any database issues, you can also run:
+  # Build first to ensure everything compiles
+  dotnet build
+
+  # Then run with specific HTTPS profile
+  dotnet run --project eBookLibrary --launch-profile https

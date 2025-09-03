@@ -1,0 +1,82 @@
+﻿@model List<eBookLibrary.Models.BorrowedBookViewModel>
+
+<div class="container mt-4">
+    <h2>Borrowed Books</h2>
+
+    <!-- Check if the model is not null and contains any books -->
+    @if (Model != null && Model.Count > 0)
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Due Date</th>
+                    <th>Time Left</th>
+                    <th>Actions</th>
+                    <th>Review</th>
+                    <th>Reviews</th> <!-- Added this column for reviews -->
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        <td>@book.DueDate.ToString("yyyy-MM-dd")</td>
+
+                        <!-- Calculate time left -->
+                        <td>
+                            @if ((book.DueDate - DateTime.Now).TotalDays <= 0)
+                            {
+                                <span class="text-danger">Overdue!</span>
+                            }
+                            else
+                            {
+                                <span>@((book.DueDate - DateTime.Now).Days) days left</span>
+                            }
+                        </td>
+
+                        <td>
+                            <!-- Return Button -->
+                            @if ((book.DueDate - DateTime.Now).TotalDays <= 0)
+                            {
+                                <span class="text-danger">Overdue!</span>
+                            }
+                            else
+                            {
+                                <!-- Ensure correct bookId is passed in the form -->
+                                <form method="post" action="/User/ReturnBook" style="display:inline;">
+                                    <input type="hidden" name="bookId" value="@book.BookId" />
+                                    <button type="submit" class="btn btn-warning btn-sm" onclick="return confirm('Are you sure you want to return this book?');">Return</button>
+                                </form>
+                            }
+                        </td>
+
+                        <!-- Add Review Button -->
+                        <td>
+                            <form method="post" action="/User/RateBook/@book.BookId">
+                                <button type="submit" class="btn btn-info btn-sm">Add Review</button>
+                            </form>
+                        </td>
+
+                        <!-- Display Reviews -->
+                        <td>
+                            <ul>
+                                @foreach (var review in book.Reviews)
+                                {
+                                    <li>@review.Content</li>
+                                }
+                            </ul>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No borrowed books at the moment.</p>
+    }
+</div>

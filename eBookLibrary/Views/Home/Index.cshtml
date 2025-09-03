@@ -1,0 +1,217 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Home - ";
+    bool isLoggedIn = HttpContextAccessor.HttpContext.Session.GetInt32("UserId") != null;
+    string username = HttpContextAccessor.HttpContext.Session.GetString("Username");
+}
+
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero" style="background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="hero-content text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title mb-3">Welcome to <span style="color: var(--accent-color);">Lumina</span>Pages</h1>
+                    <p class="hero-subtitle mx-auto">Your digital sanctuary for endless reading possibilities. Discover, borrow, and explore thousands of books at your fingertips.</p>
+                    
+                    @if (!isLoggedIn)
+                    {
+                        <div class="d-flex justify-content-center gap-3 mt-4">
+                            <a href="/Account/Login" class="btn btn-light btn-lg px-4">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
+                            </a>
+                            <a href="/Account/Register" class="btn btn-outline-light btn-lg px-4">
+                                <i class="bi bi-person-plus me-2"></i>Join Now
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="d-flex justify-content-center gap-3 mt-4">
+                            <a href="/User/ExploreBooks" class="btn btn-light btn-lg px-4">
+                                <i class="bi bi-journal-bookmark me-2"></i>Explore Books
+                            </a>
+                            <a href="/User/Library" class="btn btn-outline-light btn-lg px-4">
+                                <i class="bi bi-collection me-2"></i>My Library
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Why Choose <span style="color: var(--primary-color);">Lumina</span>Pages?</h2>
+            <p class="lead">Experience the future of digital reading with our innovative platform</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <i class="bi bi-book feature-icon"></i>
+                    <h3 class="h4 mb-3">Vast Collection</h3>
+                    <p>Access thousands of titles across genres, from classics to contemporary bestsellers.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <i class="bi bi-lightning-charge feature-icon"></i>
+                    <h3 class="h4 mb-3">Instant Access</h3>
+                    <p>Start reading immediately with our seamless digital borrowing system.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <i class="bi bi-shield-check feature-icon"></i>
+                    <h3 class="h4 mb-3">Secure Platform</h3>
+                    <p>Enjoy peace of mind with our secure, user-friendly digital environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="my-5 py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Reader Experiences</h2>
+            <p class="lead">What our community says about LuminaPages</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="card-text">"LuminaPages has completely transformed my reading habits. I can access any book I want, anytime, anywhere!"</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <span class="text-white fw-bold">SM</span>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Sarah Mitchell</h6>
+                                <small class="text-muted">Avid Reader</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="card-text">"The recommendation system is brilliant! I've discovered so many new authors that I would have never found otherwise."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <span class="text-white fw-bold">JL</span>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">James Lee</h6>
+                                <small class="text-muted">Book Enthusiast</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-half text-warning"></i>
+                        </div>
+                        <p class="card-text">"As a student, LuminaPages has been a lifesaver for my research. The academic collection is extensive and well-organized."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <span class="text-white fw-bold">AP</span>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Aisha Patel</h6>
+                                <small class="text-muted">Graduate Student</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section bg-light py-5 rounded">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">LuminaPages by Numbers</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">25K+</div>
+                    <div class="stat-label">Available Titles</div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Active Readers</div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">4.8</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section my-5">
+        <div class="container">
+            <h2 class="cta-title">Ready to start your reading journey?</h2>
+            <p class="mb-4">Join thousands of readers who have already discovered the joy of digital reading with LuminaPages.</p>
+            
+            @if (!isLoggedIn)
+            {
+                <a href="/Account/Register" class="btn btn-light btn-lg px-5 py-3">
+                    <i class="bi bi-book me-2"></i>Start Reading Today
+                </a>
+            }
+            else
+            {
+                <a href="/User/ExploreBooks" class="btn btn-light btn-lg px-5 py-3">
+                    <i class="bi bi-search me-2"></i>Explore Our Collection
+                </a>
+            }
+        </div>
+    </section>
+</div>

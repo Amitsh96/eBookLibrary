@@ -1,0 +1,98 @@
+﻿@model eBookLibrary.Models.Book
+
+<div class="container mt-4">
+    <h2>Add Book</h2>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            </ul>
+        </div>
+    }
+
+    <form method="post" action="/Admin/AddBook">
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="Author" name="Author" value="@Model.Author" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Publisher" class="form-label">Publisher</label>
+            <input type="text" class="form-control" id="Publisher" name="Publisher" value="@Model.Publisher" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="PricePurchase" class="form-label">Purchase Price</label>
+            <input type="number" step="0.01" class="form-control" id="PricePurchase" name="PricePurchase" value="@Model.PricePurchase" required />
+        </div>
+
+        <!-- Dropdown for Format -->
+        <div class="mb-3">
+            <label for="Format" class="form-label">Format</label>
+            <select class="form-select" id="Format" name="Format" required>
+                <option value="" disabled>Select a Format</option>
+                <option value="epub" selected="@(Model.Format == "epub")">ePub</option>
+                <option value="fb2" selected="@(Model.Format == "fb2")">FB2</option>
+                <option value="mobi" selected="@(Model.Format == "mobi")">Mobi</option>
+                <option value="pdf" selected="@(Model.Format == "pdf")">PDF</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="AvailableCopies" class="form-label">Available Copies</label>
+            <input type="number" class="form-control" id="AvailableCopies" name="AvailableCopies" value="@Model.AvailableCopies" required />
+        </div>
+
+        <!-- Dropdown for Genre -->
+        <div class="mb-3">
+            <label for="Genre" class="form-label">Genre</label>
+            <select class="form-select" id="Genre" name="Genre" required>
+                <option value="" disabled selected>Select a Genre</option>
+                <option value="Fiction" selected="@(Model.Genre == "Fiction")">Fiction</option>
+                <option value="Non-Fiction" selected="@(Model.Genre == "Non-Fiction")">Non-Fiction</option>
+                <option value="Mystery" selected="@(Model.Genre == "Mystery")">Mystery</option>
+                <option value="Science" selected="@(Model.Genre == "Science")">Science</option>
+                <option value="Fantasy" selected="@(Model.Genre == "Fantasy")">Fantasy</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="AgeLimit" class="form-label">Age Restriction</label>
+            <input type="number" class="form-control" id="AgeLimit" name="AgeLimit" min="0" value="@Model.AgeLimit" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Year" class="form-label">Year</label>
+            <input type="number" class="form-control" id="Year" name="Year" value="@Model.Year" required />
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="hidden" name="IsBorrowable" value="false" />
+            <input type="checkbox" class="form-check-input" id="IsBorrowable" name="IsBorrowable" value="true" checked="@Model.IsBorrowable" />
+            <label for="IsBorrowable" class="form-check-label">Is Borrowable</label>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="hidden" name="IsBuyOnly" value="false" />
+            <input type="checkbox" class="form-check-input" id="IsBuyOnly" name="IsBuyOnly" value="true" checked="@Model.IsBuyOnly" />
+            <label for="IsBuyOnly" class="form-check-label">Is Buy Only</label>
+        </div>
+
+        <div class="mb-3">
+            <label for="CoverImage" class="form-label">Cover Image (optional)</label>
+            <input type="text" class="form-control" id="CoverImage" name="CoverImage" value="@Model.CoverImage" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Book</button>
+        <a href="/Admin/ManageBooks" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

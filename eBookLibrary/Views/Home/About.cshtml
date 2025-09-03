@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+<style>
+    .about-section {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: linear-gradient(145deg, #2f4f7f 0%, #3a5c9e 100%);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid #e9ecef;
+    }
+
+    .about-title {
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        color: #3498db;
+        margin-bottom: 1rem;
+    }
+
+    .stats-section {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 3rem 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .stat-item {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .stat-label {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    .about-footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 2px solid #e9ecef;
+    }
+</style>
+
+<div class="about-section">
+    <div class="about-header">
+        <h1 class="about-title">Empowering Knowledge Through Innovation</h1>
+        <p class="lead" style="color: #ffffff;">At LuminaPages, we're passionate about making knowledge accessible to everyone. Here's a bit about us:</p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-book-reader"></i>
+            </div>
+            <h3>Where Stories Come Alive</h3>
+            <p>We believe that stories have the power to inspire and educate. That's why we've curated a collection of eBooks that will take you on incredible journeys.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Read Anywhere, Anytime</h3>
+            <p>Whether you're commuting, relaxing at home, or on a break, our platform lets you enjoy your favorite books wherever you are.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-tags"></i>
+            </div>
+            <h3>Options for Every Reader</h3>
+            <p>We know everyone reads differently. That's why we offer flexible options to borrow or buy books, so you can choose what works best for you.</p>
+        </div>
+    </div>
+
+    <div class="stats-section">
+        <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">eBooks Available</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">10,000+</div>
+            <div class="stat-label">Active Readers</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Categories</div>
+        </div>
+    </div>
+
+    <div class="about-footer">
+        <p class="mb-0" style="color: #ffffff;">Join us in fostering a love of reading and exploration. Together, let's unlock new possibilities and inspire a brighter future.</p>
+    </div>
+</div>

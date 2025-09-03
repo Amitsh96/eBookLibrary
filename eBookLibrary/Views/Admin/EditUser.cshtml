@@ -1,0 +1,30 @@
+﻿@model eBookLibrary.Models.User
+
+<div class="container mt-4">
+    <h2>Edit User</h2>
+    <form method="post" action="/Admin/EditUser">
+        <input type="hidden" name="UserId" value="@Model.UserId" />
+        <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required />
+        </div>
+        <div class="mb-3">
+            <label for="Role" class="form-label">Role</label>
+            <select class="form-select" id="Role" name="Role">
+                @foreach (var role in new[] { "User", "Admin" })
+                {
+                    if (role == Model.Role)
+                    {
+                        <option value="@role" selected>@role</option>
+                    }
+                    else
+                    {
+                        <option value="@role">@role</option>
+                    }
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="/Admin/ManageUsers" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

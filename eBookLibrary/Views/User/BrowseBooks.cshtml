@@ -1,0 +1,39 @@
+﻿@model IEnumerable<eBookLibrary.Models.Book>
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Browse Books</h1>
+
+    <!-- Search Form -->
+    <form method="get" action="/User/BrowseBooks" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="searchQuery" class="form-control" placeholder="Search for books..." />
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+
+    <!-- Books Table -->
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price (Purchase)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.PricePurchase.ToString("C")</td>
+                    <td>
+                        <a href="/User/Borrow/@book.BookId" class="btn btn-success btn-sm">Borrow</a>
+                        <a href="/User/Purchase/@book.BookId" class="btn btn-warning btn-sm">Purchase</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

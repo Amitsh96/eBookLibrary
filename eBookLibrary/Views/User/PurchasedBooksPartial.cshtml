@@ -1,0 +1,38 @@
+﻿@model eBookLibrary.Models.UserLibraryViewModel
+
+<div id="purchased-books-container">
+    @if (Model?.PurchasedBooks != null && Model.PurchasedBooks.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Cover</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Purchase Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model.PurchasedBooks)
+                {
+                    <tr id="purchased-book-@book.BookId">
+                        <td>
+                            <img src="@book.CoverImage" alt="@book.Title" style="width: 80px; height: auto;" />
+                        </td>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        <td>@book.PurchaseDate.ToString("yyyy-MM-dd")</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm btn-delete" data-book-id="@book.BookId">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No purchased books at the moment.</p>
+    }
+</div>

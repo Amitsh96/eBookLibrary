@@ -1,0 +1,43 @@
+﻿<div class="container mt-4">
+    <h1 class="text-center mb-4">Admin Dashboard</h1>
+
+    <div class="row text-center">
+        <div class="col-md-3">
+            <div class="card border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Total Users</h5>
+                    <p class="card-text text-primary">@ViewBag.TotalUsers</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-success">
+                <div class="card-body">
+                    <h5 class="card-title">Total Books</h5>
+                    <p class="card-text text-success">@ViewBag.TotalBooks</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Borrowed Books</h5>
+                    <p class="card-text text-warning">@ViewBag.BorrowedBooks</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-danger">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Notifications</h5>
+                    <p class="card-text text-danger">@ViewBag.PendingNotifications</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a href="/Admin/ManageBooks" class="btn btn-primary">Manage Books</a>
+        <a href="/Admin/ManageUsers" class="btn btn-secondary">Manage Users</a>
+    </div>
+</div>

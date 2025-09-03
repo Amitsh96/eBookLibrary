@@ -1,0 +1,39 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Position</th>
+            <th>User Email</th>
+            <th>Estimated Waiting Time (Days)</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Position</td>
+                <td>@item.UserEmail</td>
+                <td>
+                    @if (item.Position == 1)
+                    {
+                        <span>Due: @ViewBag.DueDate.ToString("yyyy-MM-dd")</span>
+                    }
+                    else
+                    {
+                        <span>@item.EstimatedDays</span>
+                    }
+                </td>
+                <td>
+                    @if (item.IsNotified)
+                    {
+                        <span class="badge bg-success">Notified</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Waiting</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

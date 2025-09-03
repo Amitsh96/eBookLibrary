@@ -1,0 +1,129 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\ebooklibrary\\ebooklibrary\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|solutionrelative:ebooklibrary\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\ebooklibrary\\ebooklibrary\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|solutionrelative:ebooklibrary\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\ebooklibrary\\ebooklibrary\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|solutionrelative:ebooklibrary\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\ebooklibrary\\ebooklibrary\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|solutionrelative:ebooklibrary\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\ebooklibrary\\ebooklibrary\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|solutionrelative:ebooklibrary\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|d:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\ebooklibrary\\ebooklibrary\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4E190E88-A08F-4A23-B09A-7E0C32767B95}|eBookLibrary\\eBookLibrary.csproj|solutionrelative:ebooklibrary\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "eBookLibrary\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Controllers\\UserController.cs",
+              "RelativeToolTip": "eBookLibrary\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAcwJAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T15:01:37.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "eBookLibrary\\Models\\Book.cs",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Models\\Book.cs",
+              "RelativeToolTip": "eBookLibrary\\Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T19:14:38.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "eBookLibrary\\Views\\Home\\About.cshtml",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "eBookLibrary\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAFsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T19:10:21.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "eBookLibrary\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "eBookLibrary\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T19:09:20.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "eBookLibrary\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "eBookLibrary\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T19:06:57.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "eBookLibrary\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\\u05DC\u05D9\u05DE\u05D5\u05D3\u05D9\u05DD\\\u05EA\u05D5\u05DB\u05E0\u05D4 \u05E9\u05E0\u05D4 \u05D3\\\u05DE\u05D1\u05D5\u05D0 \u05DC\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA \u05DE\u05D7\u05E9\u05D1\u05D9\u05DD\\eBookLibrary\\eBookLibrary\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "eBookLibrary\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-22T19:05:58.767Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
